@@ -1,0 +1,27 @@
+{
+  "name": "SaaS",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "2.5.8",
+    "less": ">= 0.0.1",
+    "jade": ">= 0.0.1",
+    "bower": "~1.4.1"
+  },
+  "description": "A base saas boilerplate",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "groots@github.com/saas"
+  },
+  "keywords": [
+    "SaaS",
+    "Boilerplate"
+  ],
+  "author": "George Roots",
+  "license": "BSD-2-Clause"
+}
