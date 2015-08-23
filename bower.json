@@ -1,0 +1,32 @@
+{
+  "name": "saas",
+  "version": "0.0.1",
+  "homepage": "https://github.com/groots/saas",
+  "description": "SaaS boilerplate",
+  "main": "index.html",
+  "keywords": [
+    "SaaS",
+    "Modules"
+  ],
+  "authors": [
+    "George Roots"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5",
+    "require": "*",
+    "lodash": "~3.10.1",
+    "backbone": "~1.2.2"
+  },
+  "devDependencies": {
+    "jasmine": "~2.3.4"
+  }
+}
