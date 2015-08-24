@@ -7,13 +7,63 @@
 	<title>SaaS Boilerplate</title>
 	<link rel="stylesheet" type="text/css" href="javascripts/lib/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/app.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body>
-	<header class="container-fluid">
-		Header
+	<header>
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#">Make A Friendly Wager</a>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      
+		      <!-- <form class="navbar-form navbar-left" role="search">
+		        <div class="form-group">
+		          <input type="text" class="form-control" placeholder="Search">
+		        </div>
+		        <button type="submit" class="btn btn-default">Submit</button>
+		      </form> -->
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="#">About</a></li>
+		        <li><a href="#">Features</a></li>
+		        <li><a href="#">Documenation</a></li>
+		        <li><a href="#">Pricing</a></li>
+		        <li><a href="#">Contact Us</a></li>
+		        <li><a href="#">Sign Up</a></li>
+		        <!-- <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+		          <ul class="dropdown-menu">
+		            <li><a href="#">Action</a></li>
+		            <li><a href="#">Another action</a></li>
+		            <li><a href="#">Something else here</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li><a href="#">Separated link</a></li>
+		          </ul>
+		        </li> -->
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
 	</header>
 	<div class="container-fluid">
 		<div class="row">
+			<section>
+				<div class="col-sm-12">
+					Friendly wagers are great between friends
+					<br />
+						<button class="btn-primary col-sm-4">Wager Now</button>
+				</div>
+			</section>
 			<aside class="col-sm-2">aside</aside>
 			<section class="col-sm-8">section</section>
 			<aside class="col-sm-2">aside</aside>
@@ -23,7 +73,5 @@
 	<footer class="container-fluid">
 		Footer
 	</footer>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </body>
 </html>
