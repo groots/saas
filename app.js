@@ -3,37 +3,37 @@
  * Module dependencies.
  */
 
-var express = require('express')
-  , routes = require('./routes');
+var express = require('express');
+    // async = require('async'),
+var stormpath = require('express-stormpath');
+var apiRoutes = require('./routes');
+var app = express();
+// app.set('views', __dirname + '/views');
 
-var app = module.exports = express.createServer();
 
-// Configuration
 
-app.configure(function(){
-  app.set('views', __dirname + '/views');
-  app.set('view engine', 'jade');
-  app.use(express.bodyParser());
-  app.use(express.methodOverride());
-  app.use(app.router);
-  app.use(express.static(__dirname + '/public'));
-});
+app.use(stormpath.init(app, {
+  application:process.env.STORMPATH_CLIENT_APPLICATION_HREF,
+  apiKeyFile: '/Users/A73740/.stormpath/apiKey-8ILTUZQZRQME76BKYYYF6CUUX.properties',
+application: process.env.STORMPATH_CLIENT_APPLICATION_HREF,
+secretKey: 'kdfajsfasjdfoasxjcoicslkfjqweoifjasizmomlkjjok'
+}));
+app.use(express.static(__dirname + '/public'));
 
-app.configure('development', function(){
-  app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
-});
+// Configurations
+//console.log(process.env);
 
-app.configure('production', function(){
-  app.use(express.errorHandler());
-});
+// apiRoutes
+app.get('/', apiRoutes.index);
+app.get('/plans', apiRoutes.index);
+// app.get('/login', apiRoutes.index);
 
-// Routes
 
-app.get('/', routes.index);
-app.get('/users', routes.index);
+
 
 //endpoint that returns all plan options
-app.get('/plans', routes.index);
-app.listen(3000, function(){
-  console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
-});
+app.get('/plans', apiRoutes.index);
+
+// app.use(express.static("public"));
+// app.use(express.static(path.join(__dirname, 'public')));
+app.listen(process.env.PORT || 3000);
